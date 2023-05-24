@@ -1,13 +1,32 @@
-import * as images from "../assets/images/index.js";
+// import * as images from "../assets/images/index.js";
 
-const {
+
+const jtwray = "../assets/images/jtwray-headshot.webp";
+const artificialartist_preview = "../assets/images/artificialartist-preview.webp";
+const kanyes8ball_preview = "../assets/images/kanyes8ball-preview.webp";
+const rventure_preview = "../assets/images/rventure-preview.webp";
+const twittercardapi_preview = "../assets/images/twittercardapi-preview.webp";
+const tuckerwraymetwittercard_preview = "../assets/images/tuckerwray-metwittercard-preview.webp";
+const wonderwomen_preview = "../assets/images/wonderwomen.webp";
+console.log({
+  jtwray,
   wonderwomen_preview,
   kanyes8ball_preview,
   rventure_preview,
   artificialartist_preview,
   twittercardapi_preview
-} = images;
-console.log({ rventure_preview });
+})
+
+// export {
+//   wonderwomen_preview,
+//   kanyes8ball_preview,
+//   rventure_preview,
+//   artificialartist_preview,
+//   jtwray,
+//   tuckerwraymetwittercard_preview,
+//   twittercardapi_preview
+// };
+
 const projectsDiv = document.querySelector("section#projects");
 
 let projects = [
@@ -177,30 +196,3 @@ function createProjectCards(projectsArr) {
 createProjectCards(projects);
 
 let tuckersProjectsItemDiv = document.querySelectorAll(".projects");
-
-// import $ from "jquery";
-
-// $(document).ready(function(){
-//   // Add smooth scrolling to all links
-//   $("a").on('click', function(event) {
-
-//     // Make sure this.hash has a value before overriding default behavior
-//     if (this.hash !== "") {
-//       // Prevent default anchor click behavior
-//       event.preventDefault();
-
-//       // Store hash
-//       var hash = this.hash;
-
-//       // Using jQuery's animate() method to add smooth page scroll
-//       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-//       $('html, body').animate({
-//         scrollTop: $(hash).offset().top
-//       }, 800, function(){
-
-//         // Add hash (#) to URL when done scrolling (default click behavior)
-//         window.location.hash = hash;
-//       });
-//     } // End if
-//   });
-// });

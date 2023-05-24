@@ -17,7 +17,7 @@
       property="og:image"
       content="./assets/images/tuckerwray-metwittercard-preview.webp"
     />
-    <meta property="og:url" content="https://tuckerwray.me" />
+    <meta property="og:url" content="https://tuckerwray.com" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image:alt"
@@ -48,7 +48,7 @@
           <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="/#contact">Reach Out</a>
+            <a href="#contact">Reach Out</a>
           </nav>
 
           <section id="skills">
@@ -94,6 +94,24 @@
       </section>
       <section id="projects"></section>
       <section id="contact">
+        const handleSubmit = (event) => {
+          event.preventDefault();
+        
+          const myForm = event.target;
+          const formData = new FormData(myForm);
+          
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+          })
+            .then(() => console.log("Form successfully submitted"))
+            .catch((error) => alert(error));
+        };
+        
+        document
+          .querySelector("form")
+          .addEventListener("submit", handleSubmit);
         <form
           class="reachout"
           name="reachout"
@@ -142,8 +160,8 @@
         </form>
       </section>
     </main>
-    <script src="src/projects.js"></script>
-    <script src="functions/processForm.js"></script>
+    <script src="src/projects.js" type="module"></script>
+    <script src="src/utils/processForm.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </body>
 </html>
